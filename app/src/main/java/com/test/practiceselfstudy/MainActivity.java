@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+
+import java.util.StringTokenizer;
 
 
 public class MainActivity extends Activity {
@@ -17,7 +20,13 @@ public class MainActivity extends Activity {
     }
 
     public void changeLabel(View view) {
-        for(int i=0; i<5; i++) Log.v("TEST", "Clicked"+i );
+        //for(int i=0; i<5; i++) Log.v("TEST", "Clicked"+i );
+        int sum=0;
+        for(int i=1;i<=10;i++)sum=i+sum;
+        TextView tv = (TextView)findViewById(R.id.myLabel01);
+        tv.setText(Integer.toString(sum));
+        //tv.setText(String.valueOf(sum));
+        //tv.setText("" + sum);
     }
 
     @Override
