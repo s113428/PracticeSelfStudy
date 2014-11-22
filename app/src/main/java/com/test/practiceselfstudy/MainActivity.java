@@ -2,8 +2,10 @@ package com.test.practiceselfstudy;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends Activity {
@@ -14,6 +16,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    public void changeLabel(View view) {
+        for(int i=0; i<5; i++) Log.v("TEST", "Clicked"+i );
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
