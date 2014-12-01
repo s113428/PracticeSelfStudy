@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -12,6 +14,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        Button startCalc = (Button) findViewById(R.id.myButton);
+//        startCalc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TextView tv = (TextView)findViewById(R.id.myLabel);
+//                tv.setText(""+5);
+//            }
+//        });
     }
 
 
@@ -36,4 +47,12 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void startCalc (View view){
+        TextView tv = (TextView) findViewById(R.id.myLabel);
+        tv.setText("1+2+3="+"\t\t\t"+(1+2+3)+"\n"+
+                "√16="+"\t\t\t\t\t\t"+Math.sqrt(16)+"\n"+
+                "16mod5 ="+"\t"+(16%5));
+    }
+
 }
